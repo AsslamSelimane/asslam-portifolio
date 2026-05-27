@@ -44,20 +44,23 @@ function App() {
         initial="hidden"
         animate="visible"
       >
+
         <span className="tag">
           PORTFÓLIO PROFISSIONAL
         </span>
 
-        <h1>Asslam Selimane</h1>
+        <h1>
+          Asslam Selimane
+        </h1>
 
         <h2>
-          Marketing • Comunicação • Social Media • Copywriting • Account Manager  
+          Marketing • Comunicação • Social Media
         </h2>
 
         <p>
           Profissional focado em marketing digital,
-          branding, comunicação estratégica e gestão
-          de redes sociais.
+          branding, comunicação estratégica
+          e gestão de redes sociais.
         </p>
 
         <div className="buttons">
@@ -212,8 +215,8 @@ function App() {
             <p>
               Cobertura digital da FACIM 2024,
               incluindo gestão de conteúdos,
-              actualização de redes sociais e
-              apoio ao Gabinete de Imprensa.
+              actualização de redes sociais
+              e apoio ao Gabinete de Imprensa.
             </p>
           </motion.div>
 
@@ -279,7 +282,10 @@ function App() {
             whileHover={{ scale: 1.04 }}
           >
             <h3>Email</h3>
-            <span>asslam@email.com</span>
+
+            <span>
+              asslamselemane@gmail.com
+            </span>
           </motion.div>
 
           <motion.div
@@ -287,7 +293,10 @@ function App() {
             whileHover={{ scale: 1.04 }}
           >
             <h3>Telefone</h3>
-            <span>+258 84 000 0000</span>
+
+            <span>
+              +258 84 241 4726
+            </span>
           </motion.div>
 
           <motion.div
@@ -295,7 +304,10 @@ function App() {
             whileHover={{ scale: 1.04 }}
           >
             <h3>Localização</h3>
-            <span>Maputo, Moçambique</span>
+
+            <span>
+              Maputo, Moçambique
+            </span>
           </motion.div>
 
         </div>
@@ -305,10 +317,12 @@ function App() {
       {/* FOOTER */}
 
       <footer className="footer">
+
         <p>
           © 2026 Asslam Selimane.
           Todos os direitos reservados.
         </p>
+
       </footer>
 
     </div>
