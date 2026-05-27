@@ -118,4 +118,66 @@ function App() {
 
             <p>
               Estratégias digitais focadas
-              em alcance, engaj
+              em alcance, engajamento e conversão.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* PROJECTS */}
+
+      <section className="projects">
+
+        <span className="section-tag">
+          EXPERIÊNCIA
+        </span>
+
+        <h2>
+          Projectos & Experiências
+        </h2>
+
+        <div className="projects-grid">
+
+          <div className="project-card">
+            <h3>FACIM 2024</h3>
+
+            <p>
+              Cobertura digital da FACIM 2024,
+              incluindo gestão de conteúdos,
+              actualização de redes sociais
+              e apoio ao Gabinete de Imprensa.
+            </p>
+          </div>
+
+          <div className="project-card">
+            <h3>Publicus</h3>
+
+            <p>
+              Gestão de redes sociais,
+              recuperação de contas,
+              actualização de perfis digitais
+              e estratégias de engajamento.
+            </p>
+          </div>
+
+          <div className="project-card">
+            <h3>Copywriting Institucional</h3>
+
+            <p>
+              Desenvolvimento de conteúdos
+              estratégicos para campanhas,
+              jornais institucionais e comunicação.
+            </p>
+          </div>
+
+        </div>
+
+      </section>
+
+    </div>
+  )
+}
+
+export default App
