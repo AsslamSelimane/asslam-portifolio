@@ -1,16 +1,28 @@
 import "./App.css"
 
-import vodacomImage from "./assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg"
+import vodacom1 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg"
+import vodacom2 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-2.jpg"
 
 import santal1 from "./assets/projects/santal/posts/santal-1.jpg"
 import santal2 from "./assets/projects/santal/posts/santal-2.jpg"
+import santal3 from "./assets/projects/santal/posts/santal-3.jpg"
+import santal4 from "./assets/projects/santal/posts/santal-4.jpg"
 
 import parmalat1 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-1.jpg"
 import parmalat2 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-2.jpg"
+import parmalat3 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-3.jpg"
+import parmalat4 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-4.jpg"
+import parmalat5 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-5.jpg"
 
 import bim1 from "./assets/projects/millennium bim/carousels/bim-1.jpg"
+import bim2 from "./assets/projects/millennium bim/carousels/bim-2.jpg"
+import bim3 from "./assets/projects/millennium bim/carousels/bim-3.jpg"
 
 import cim1 from "./assets/projects/companhia industrial da matola/carousels/cim-1.jpg"
+import cim2 from "./assets/projects/companhia industrial da matola/carousels/cim-2.jpg"
+import cim3 from "./assets/projects/companhia industrial da matola/carousels/cim-3.jpg"
+import cim4 from "./assets/projects/companhia industrial da matola/carousels/cim-4.jpg"
+import cim5 from "./assets/projects/companhia industrial da matola/carousels/cim-5.jpg"
 
 function App() {
   return (
@@ -99,10 +111,12 @@ function App() {
 
           <div className="project-card">
 
-            <img
-              src={vodacomImage}
-              alt="Vodacom"
-            />
+            <div className="project-gallery">
+
+              <img src={vodacom1} alt="Vodacom" />
+              <img src={vodacom2} alt="Vodacom" />
+
+            </div>
 
             <span>01</span>
 
@@ -122,15 +136,10 @@ function App() {
 
             <div className="project-gallery">
 
-              <img
-                src={santal1}
-                alt="Santal"
-              />
-
-              <img
-                src={santal2}
-                alt="Santal"
-              />
+              <img src={santal1} alt="Santal" />
+              <img src={santal2} alt="Santal" />
+              <img src={santal3} alt="Santal" />
+              <img src={santal4} alt="Santal" />
 
             </div>
 
@@ -152,15 +161,11 @@ function App() {
 
             <div className="project-gallery">
 
-              <img
-                src={parmalat1}
-                alt="Parmalat"
-              />
-
-              <img
-                src={parmalat2}
-                alt="Parmalat"
-              />
+              <img src={parmalat1} alt="Parmalat" />
+              <img src={parmalat2} alt="Parmalat" />
+              <img src={parmalat3} alt="Parmalat" />
+              <img src={parmalat4} alt="Parmalat" />
+              <img src={parmalat5} alt="Parmalat" />
 
             </div>
 
@@ -180,10 +185,13 @@ function App() {
 
           <div className="project-card">
 
-            <img
-              src={bim1}
-              alt="Millennium BIM"
-            />
+            <div className="project-gallery">
+
+              <img src={bim1} alt="Millennium BIM" />
+              <img src={bim2} alt="Millennium BIM" />
+              <img src={bim3} alt="Millennium BIM" />
+
+            </div>
 
             <span>04</span>
 
@@ -201,10 +209,15 @@ function App() {
 
           <div className="project-card">
 
-            <img
-              src={cim1}
-              alt="CIM"
-            />
+            <div className="project-gallery">
+
+              <img src={cim1} alt="CIM" />
+              <img src={cim2} alt="CIM" />
+              <img src={cim3} alt="CIM" />
+              <img src={cim4} alt="CIM" />
+              <img src={cim5} alt="CIM" />
+
+            </div>
 
             <span>05</span>
 
