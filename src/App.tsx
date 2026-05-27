@@ -1,19 +1,15 @@
-
 import "./App.css"
-
 import { useState } from "react"
+
+/* IMAGES */
 
 import vodacom1 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg"
 import vodacom2 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-2.jpg"
-
-import vodacomReel from "./assets/projects/vodacom-mpesa/reels/vodacom-reel.mp4"
 
 import santal1 from "./assets/projects/santal/posts/santal-1.jpg"
 import santal2 from "./assets/projects/santal/posts/santal-2.jpg"
 import santal3 from "./assets/projects/santal/posts/santal-3.jpg"
 import santal4 from "./assets/projects/santal/posts/santal-4.jpg"
-
-import santalReel from "./assets/projects/santal/reels/santal-reel.mp4"
 
 import parmalat1 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-1.jpg"
 import parmalat2 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-2.jpg"
@@ -31,11 +27,16 @@ import cim3 from "./assets/projects/companhia industrial da matola/carousels/cim
 import cim4 from "./assets/projects/companhia industrial da matola/carousels/cim-4.jpg"
 import cim5 from "./assets/projects/companhia industrial da matola/carousels/cim-5.jpg"
 
+/* VIDEOS */
+
+import vodacomReel from "./assets/projects/vodacom-mpesa/reels/vodacom-reel.mp4"
+import santalReel from "./assets/projects/santal/reels/santal-reel.mp4"
+
 function App() {
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
 
-  const openImage = (image:string) => {
+  const openImage = (image: string) => {
     setSelectedImage(image)
   }
 
@@ -44,6 +45,7 @@ function App() {
   }
 
   return (
+
     <main className="portfolio">
 
       {/* NAVBAR */}
@@ -80,19 +82,18 @@ function App() {
 
       <section className="hero">
 
+        <div className="hero-overlay"></div>
+
+        <video
+          className="hero-background-video"
+          src={vodacomReel}
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+
         <div className="hero-content">
-
-          <div className="hero-video">
-
-            <video
-              src={vodacomReel}
-              autoPlay
-              muted
-              loop
-              playsInline
-            />
-
-          </div>
 
           <p className="hero-tag">
             MARKETING • BRANDING • SOCIAL MEDIA
@@ -103,8 +104,8 @@ function App() {
           </h1>
 
           <p className="hero-description">
-            Profissional de Marketing e Comunicação com experiência em Social Media,
-            Branding, Copywriting e gestão de presença digital para marcas,
+            Profissional de Marketing e Comunicação com experiência em Branding,
+            Social Media, Copywriting e gestão de presença digital para marcas,
             campanhas e eventos.
           </p>
 
@@ -119,34 +120,48 @@ function App() {
         id="about"
       >
 
-        <div className="about-content">
+        <div className="section-header">
 
-          <p className="about-tag">
+          <p className="section-tag">
             SOBRE MIM
           </p>
 
           <h2>
-            Comunicação criativa com foco em estratégia e impacto visual.
+            Comunicação criativa com visão estratégica.
           </h2>
 
-          <p className="about-description">
-            Actuo nas áreas de Marketing, Branding e Social Media,
-            com experiência no desenvolvimento de estratégias de comunicação,
-            produção de conteúdo e gestão de presença digital para marcas,
-            campanhas e eventos.
-          </p>
+        </div>
 
-          <p className="about-description">
-            Passei pela Ikigai 360 Agency como estagiário na posição de
-            Account Manager e pela Create como Copywriter,
-            experiências que reforçaram a minha visão estratégica,
-            criatividade e capacidade de comunicação.
-          </p>
+        <div className="about-grid">
 
-          <p className="about-description">
-            Também fui responsável pela gestão e actualização das redes sociais
-            da FACIM 2024, contribuindo para a cobertura e divulgação digital do evento.
-          </p>
+          <div className="about-card">
+
+            <p>
+              Actuo nas áreas de Marketing, Branding e Social Media,
+              com experiência no desenvolvimento de estratégias de comunicação,
+              produção de conteúdo e gestão de presença digital.
+            </p>
+
+          </div>
+
+          <div className="about-card">
+
+            <p>
+              Passei pela Ikigai 360 Agency como Account Manager
+              e pela Create como Copywriter,
+              fortalecendo a minha criatividade e visão estratégica.
+            </p>
+
+          </div>
+
+          <div className="about-card">
+
+            <p>
+              Também fui responsável pela cobertura e actualização das redes sociais
+              da FACIM 2024.
+            </p>
+
+          </div>
 
         </div>
 
@@ -159,14 +174,14 @@ function App() {
         id="projects"
       >
 
-        <div className="projects-header">
+        <div className="section-header">
 
-          <p className="projects-tag">
+          <p className="section-tag">
             PROJECTOS
           </p>
 
           <h2>
-            Algumas marcas e projectos com os quais colaborei.
+            Algumas marcas e campanhas com as quais colaborei.
           </h2>
 
         </div>
@@ -179,16 +194,29 @@ function App() {
 
             <div className="project-gallery">
 
-              <img src={vodacom1} alt="" onClick={() => openImage(vodacom1)} />
-              <img src={vodacom2} alt="" onClick={() => openImage(vodacom2)} />
+              <img
+                src={vodacom1}
+                alt="Vodacom"
+                onClick={() => openImage(vodacom1)}
+              />
+
+              <img
+                src={vodacom2}
+                alt="Vodacom"
+                onClick={() => openImage(vodacom2)}
+              />
 
             </div>
 
-            <span>01</span>
+            <div className="project-info">
 
-            <h3>
-              Vodacom M-Pesa
-            </h3>
+              <span>01</span>
+
+              <h3>
+                Vodacom M-Pesa
+              </h3>
+
+            </div>
 
           </div>
 
@@ -205,11 +233,15 @@ function App() {
 
             </div>
 
-            <span>02</span>
+            <div className="project-info">
 
-            <h3>
-              Santal
-            </h3>
+              <span>02</span>
+
+              <h3>
+                Santal
+              </h3>
+
+            </div>
 
           </div>
 
@@ -227,11 +259,15 @@ function App() {
 
             </div>
 
-            <span>03</span>
+            <div className="project-info">
 
-            <h3>
-              Parmalat Moçambique
-            </h3>
+              <span>03</span>
+
+              <h3>
+                Parmalat Moçambique
+              </h3>
+
+            </div>
 
           </div>
 
@@ -247,11 +283,15 @@ function App() {
 
             </div>
 
-            <span>04</span>
+            <div className="project-info">
 
-            <h3>
-              Millennium BIM
-            </h3>
+              <span>04</span>
+
+              <h3>
+                Millennium BIM
+              </h3>
+
+            </div>
 
           </div>
 
@@ -269,11 +309,15 @@ function App() {
 
             </div>
 
-            <span>05</span>
+            <div className="project-info">
 
-            <h3>
-              Companhia Industrial da Matola
-            </h3>
+              <span>05</span>
+
+              <h3>
+                Companhia Industrial da Matola
+              </h3>
+
+            </div>
 
           </div>
 
@@ -288,9 +332,9 @@ function App() {
         id="reels"
       >
 
-        <div className="projects-header">
+        <div className="section-header">
 
-          <p className="projects-tag">
+          <p className="section-tag">
             REELS
           </p>
 
@@ -300,13 +344,17 @@ function App() {
 
         </div>
 
-        <div className="reel-card">
+        <div className="reels-grid">
 
-          <video
-            src={santalReel}
-            controls
-            playsInline
-          />
+          <div className="reel-card">
+
+            <video
+              src={santalReel}
+              controls
+              playsInline
+            />
+
+          </div>
 
         </div>
 
@@ -319,15 +367,20 @@ function App() {
         id="contact"
       >
 
-        <div className="contact-card">
+        <div className="contact-container">
 
-          <p className="contact-tag">
+          <p className="section-tag">
             CONTACTO
           </p>
 
           <h2>
             Vamos construir algo relevante juntos.
           </h2>
+
+          <p>
+            Disponível para oportunidades profissionais,
+            colaborações e projectos criativos.
+          </p>
 
           <div className="contact-links">
 
@@ -380,6 +433,7 @@ function App() {
       }
 
     </main>
+
   )
 }
 
