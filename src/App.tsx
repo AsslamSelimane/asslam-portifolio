@@ -2,31 +2,19 @@ import './App.css'
 
 function App() {
   return (
-    <div
-      style={{
-        minHeight: '100vh',
-        background: '#0f172a',
-        color: 'white',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        fontFamily: 'Arial',
-        textAlign: 'center',
-        padding: '20px',
-      }}
-    >
-      <h1 style={{ fontSize: '48px', marginBottom: '20px' }}>
-        Asslam Selimane
-      </h1>
+    <div className="app">
+      <section className="hero">
+        <h1>Asslam Selimane</h1>
 
-      <p style={{ fontSize: '20px', maxWidth: '700px' }}>
-        Bem-vindo ao meu portfólio profissional.
-      </p>
+        <h2>Marketing • Comunicação • Social Media</h2>
 
-      <p style={{ marginTop: '20px', opacity: 0.7 }}>
-        Website em actualização...
-      </p>
+        <p>
+          Profissional focado em marketing digital, branding,
+          comunicação estratégica e gestão de redes sociais.
+        </p>
+
+        <button>Entrar em contacto</button>
+      </section>
     </div>
   )
 }
