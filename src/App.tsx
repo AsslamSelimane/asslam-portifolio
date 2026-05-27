@@ -12,7 +12,7 @@ function App() {
         <nav>
           <a href="#">Início</a>
           <a href="#">Sobre</a>
-          <a href="#">Projectos</a>
+          <a href="#">Skills</a>
           <a href="#">Contacto</a>
         </nav>
       </header>
@@ -66,6 +66,59 @@ function App() {
             WhatsApp e Twitter, ajudando marcas e projectos
             a melhorarem a sua presença digital.
           </p>
+
+        </div>
+      </section>
+
+      {/* SKILLS SECTION */}
+
+      <section className="skills">
+
+        <span className="section-tag">
+          COMPETÊNCIAS
+        </span>
+
+        <h2>
+          Áreas de especialização
+        </h2>
+
+        <div className="skills-grid">
+
+          <div className="skill-card">
+            <h3>Social Media</h3>
+
+            <p>
+              Gestão estratégica de redes sociais,
+              criação de conteúdo e crescimento digital.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Copywriting</h3>
+
+            <p>
+              Desenvolvimento de textos persuasivos
+              para campanhas e comunicação digital.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Branding</h3>
+
+            <p>
+              Construção de identidade visual
+              e posicionamento de marcas.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Marketing Digital</h3>
+
+            <p>
+              Estratégias digitais focadas
+              em alcance, engajamento e conversão.
+            </p>
+          </div>
 
         </div>
       </section>

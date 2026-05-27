@@ -1,184 +1,130 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+import './App.css'
+
+function App() {
+  return (
+    <div className="app">
+
+      {/* NAVBAR */}
+
+      <header className="navbar">
+        <h2 className="logo">AS</h2>
+
+        <nav>
+          <a href="#">Início</a>
+          <a href="#">Sobre</a>
+          <a href="#">Skills</a>
+          <a href="#">Contacto</a>
+        </nav>
+      </header>
+
+      {/* HERO SECTION */}
+
+      <section className="hero">
+        <span className="tag">PORTFÓLIO PROFISSIONAL</span>
+
+        <h1>Asslam Selimane</h1>
+
+        <h2>Marketing • Comunicação • Social Media</h2>
+
+        <p>
+          Profissional focado em marketing digital, branding,
+          comunicação estratégica e gestão de redes sociais.
+        </p>
+
+        <div className="buttons">
+          <button className="primary">
+            Ver Projectos
+          </button>
+
+          <button className="secondary">
+            Contactar
+          </button>
+        </div>
+      </section>
+
+      {/* ABOUT SECTION */}
+
+      <section className="about">
+        <div className="about-text">
+
+          <span className="section-tag">
+            SOBRE MIM
+          </span>
+
+          <h2>
+            Estratégia, criatividade e comunicação.
+          </h2>
+
+          <p>
+            Sou um profissional de marketing e comunicação com experiência
+            em gestão de redes sociais, branding, copywriting e cobertura
+            de eventos institucionais.
+          </p>
+
+          <p>
+            Já trabalhei com plataformas como Facebook, Instagram,
+            WhatsApp e Twitter, ajudando marcas e projectos
+            a melhorarem a sua presença digital.
+          </p>
+
+        </div>
+      </section>
+
+      {/* SKILLS SECTION */}
+
+      <section className="skills">
+
+        <span className="section-tag">
+          COMPETÊNCIAS
+        </span>
+
+        <h2>
+          Áreas de especialização
+        </h2>
+
+        <div className="skills-grid">
+
+          <div className="skill-card">
+            <h3>Social Media</h3>
+
+            <p>
+              Gestão estratégica de redes sociais,
+              criação de conteúdo e crescimento digital.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Copywriting</h3>
+
+            <p>
+              Desenvolvimento de textos persuasivos
+              para campanhas e comunicação digital.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Branding</h3>
+
+            <p>
+              Construção de identidade visual
+              e posicionamento de marcas.
+            </p>
+          </div>
+
+          <div className="skill-card">
+            <h3>Marketing Digital</h3>
+
+            <p>
+              Estratégias digitais focadas
+              em alcance, engajamento e conversão.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  )
 }
 
-body {
-  background: #020617;
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-}
-
-.app {
-  min-height: 100vh;
-}
-
-/* NAVBAR */
-
-.navbar {
-  width: 100%;
-  padding: 25px 60px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  font-size: 28px;
-  color: #38bdf8;
-}
-
-nav {
-  display: flex;
-  gap: 30px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #cbd5e1;
-  transition: 0.3s;
-  font-size: 16px;
-}
-
-nav a:hover {
-  color: #38bdf8;
-}
-
-/* HERO */
-
-.hero {
-  min-height: 85vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 60px;
-  max-width: 900px;
-}
-
-.tag {
-  color: #38bdf8;
-  margin-bottom: 20px;
-  font-size: 14px;
-  letter-spacing: 3px;
-}
-
-.hero h1 {
-  font-size: 80px;
-  margin-bottom: 20px;
-  line-height: 1;
-}
-
-.hero h2 {
-  font-size: 32px;
-  color: #94a3b8;
-  margin-bottom: 25px;
-}
-
-.hero p {
-  font-size: 20px;
-  line-height: 1.7;
-  color: #cbd5e1;
-  max-width: 700px;
-  margin-bottom: 40px;
-}
-
-.buttons {
-  display: flex;
-  gap: 20px;
-}
-
-button {
-  padding: 15px 30px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.primary {
-  background: #38bdf8;
-  color: #020617;
-}
-
-.secondary {
-  background: transparent;
-  border: 2px solid #38bdf8;
-  color: #38bdf8;
-}
-
-button:hover {
-  transform: translateY(-3px);
-}
-
-/* ABOUT */
-
-.about {
-  padding: 100px 60px;
-  background: #0f172a;
-}
-
-.about-text {
-  max-width: 900px;
-}
-
-.section-tag {
-  color: #38bdf8;
-  letter-spacing: 3px;
-  font-size: 14px;
-}
-
-.about h2 {
-  font-size: 48px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  line-height: 1.2;
-}
-
-.about p {
-  color: #cbd5e1;
-  font-size: 20px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-/* RESPONSIVO */
-
-@media (max-width: 768px) {
-
-  .navbar {
-    padding: 25px;
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .hero {
-    padding: 30px;
-  }
-
-  .hero h1 {
-    font-size: 52px;
-  }
-
-  .hero h2 {
-    font-size: 24px;
-  }
-
-  .buttons {
-    flex-direction: column;
-  }
-
-  .about {
-    padding: 60px 30px;
-  }
-
-  .about h2 {
-    font-size: 36px;
-  }
-
-  .about p {
-    font-size: 18px;
-  }
-}
+export default App
