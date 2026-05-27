@@ -1,5 +1,7 @@
 import "./App.css"
 
+import { useState } from "react"
+
 import vodacom1 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg"
 import vodacom2 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-2.jpg"
 
@@ -25,6 +27,17 @@ import cim4 from "./assets/projects/companhia industrial da matola/carousels/cim
 import cim5 from "./assets/projects/companhia industrial da matola/carousels/cim-5.jpg"
 
 function App() {
+
+  const [selectedImage, setSelectedImage] = useState<string | null>(null)
+
+  const openImage = (image:string) => {
+    setSelectedImage(image)
+  }
+
+  const closeImage = () => {
+    setSelectedImage(null)
+  }
+
   return (
     <main className="portfolio">
 
@@ -109,11 +122,6 @@ function App() {
             criatividade e capacidade de comunicação.
           </p>
 
-          <p className="about-description">
-            Também fui responsável pela gestão e actualização das redes sociais
-            da FACIM 2024, contribuindo para a cobertura e divulgação digital do evento.
-          </p>
-
         </div>
 
       </section>
@@ -139,12 +147,14 @@ function App() {
 
         <div className="projects-grid">
 
+          {/* VODACOM */}
+
           <div className="project-card">
 
             <div className="project-gallery">
 
-              <img src={vodacom1} alt="Vodacom" />
-              <img src={vodacom2} alt="Vodacom" />
+              <img src={vodacom1} alt="" onClick={() => openImage(vodacom1)} />
+              <img src={vodacom2} alt="" onClick={() => openImage(vodacom2)} />
 
             </div>
 
@@ -156,14 +166,16 @@ function App() {
 
           </div>
 
+          {/* SANTAL */}
+
           <div className="project-card">
 
             <div className="project-gallery">
 
-              <img src={santal1} alt="Santal" />
-              <img src={santal2} alt="Santal" />
-              <img src={santal3} alt="Santal" />
-              <img src={santal4} alt="Santal" />
+              <img src={santal1} alt="" onClick={() => openImage(santal1)} />
+              <img src={santal2} alt="" onClick={() => openImage(santal2)} />
+              <img src={santal3} alt="" onClick={() => openImage(santal3)} />
+              <img src={santal4} alt="" onClick={() => openImage(santal4)} />
 
             </div>
 
@@ -175,15 +187,17 @@ function App() {
 
           </div>
 
+          {/* PARMALAT */}
+
           <div className="project-card">
 
             <div className="project-gallery">
 
-              <img src={parmalat1} alt="Parmalat" />
-              <img src={parmalat2} alt="Parmalat" />
-              <img src={parmalat3} alt="Parmalat" />
-              <img src={parmalat4} alt="Parmalat" />
-              <img src={parmalat5} alt="Parmalat" />
+              <img src={parmalat1} alt="" onClick={() => openImage(parmalat1)} />
+              <img src={parmalat2} alt="" onClick={() => openImage(parmalat2)} />
+              <img src={parmalat3} alt="" onClick={() => openImage(parmalat3)} />
+              <img src={parmalat4} alt="" onClick={() => openImage(parmalat4)} />
+              <img src={parmalat5} alt="" onClick={() => openImage(parmalat5)} />
 
             </div>
 
@@ -195,13 +209,15 @@ function App() {
 
           </div>
 
+          {/* BIM */}
+
           <div className="project-card">
 
             <div className="project-gallery">
 
-              <img src={bim1} alt="BIM" />
-              <img src={bim2} alt="BIM" />
-              <img src={bim3} alt="BIM" />
+              <img src={bim1} alt="" onClick={() => openImage(bim1)} />
+              <img src={bim2} alt="" onClick={() => openImage(bim2)} />
+              <img src={bim3} alt="" onClick={() => openImage(bim3)} />
 
             </div>
 
@@ -213,15 +229,17 @@ function App() {
 
           </div>
 
+          {/* CIM */}
+
           <div className="project-card">
 
             <div className="project-gallery">
 
-              <img src={cim1} alt="CIM" />
-              <img src={cim2} alt="CIM" />
-              <img src={cim3} alt="CIM" />
-              <img src={cim4} alt="CIM" />
-              <img src={cim5} alt="CIM" />
+              <img src={cim1} alt="" onClick={() => openImage(cim1)} />
+              <img src={cim2} alt="" onClick={() => openImage(cim2)} />
+              <img src={cim3} alt="" onClick={() => openImage(cim3)} />
+              <img src={cim4} alt="" onClick={() => openImage(cim4)} />
+              <img src={cim5} alt="" onClick={() => openImage(cim5)} />
 
             </div>
 
@@ -283,6 +301,26 @@ function App() {
         </p>
 
       </footer>
+
+      {/* LIGHTBOX */}
+
+      {
+        selectedImage && (
+
+          <div
+            className="lightbox"
+            onClick={closeImage}
+          >
+
+            <img
+              src={selectedImage}
+              alt=""
+            />
+
+          </div>
+
+        )
+      }
 
     </main>
   )
