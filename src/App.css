@@ -1,12 +1,12 @@
-/* =========================
+/* =========================================
    GOOGLE FONTS
-========================= */
+========================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* =========================
+/* =========================================
    RESET
-========================= */
+========================================= */
 
 * {
   margin: 0;
@@ -14,9 +14,9 @@
   box-sizing: border-box;
 }
 
-/* =========================
-   ROOT
-========================= */
+/* =========================================
+   ROOT COLORS
+========================================= */
 
 :root {
   --primary: #111725;
@@ -24,13 +24,13 @@
   --accent: #E45F26;
   --text: #FDFFFB;
 
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
   --transition: 0.3s ease;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
-/* =========================
+/* =========================================
    GLOBAL
-========================= */
+========================================= */
 
 html {
   scroll-behavior: smooth;
@@ -57,6 +57,7 @@ section {
 a {
   text-decoration: none;
   color: var(--text);
+  transition: var(--transition);
 }
 
 ul {
@@ -68,18 +69,20 @@ img {
   display: block;
 }
 
-/* =========================
+/* =========================================
    HEADER
-========================= */
+========================================= */
 
 header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 999;
+
+  z-index: 1000;
 
   background: rgba(17, 23, 37, 0.95);
+
   backdrop-filter: blur(10px);
 
   border-bottom: 1px solid rgba(255,255,255,0.05);
@@ -94,7 +97,7 @@ header {
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: var(--accent);
 }
@@ -108,19 +111,20 @@ header {
 .nav-links a {
   position: relative;
   font-weight: 500;
-  transition: var(--transition);
 }
 
 .nav-links a::after {
   content: "";
+
   width: 0%;
   height: 2px;
+
+  background: var(--accent);
 
   position: absolute;
   left: 0;
   bottom: -6px;
 
-  background: var(--accent);
   transition: var(--transition);
 }
 
@@ -128,9 +132,9 @@ header {
   width: 100%;
 }
 
-/* =========================
+/* =========================================
    HERO SECTION
-========================= */
+========================================= */
 
 .hero {
   min-height: 100vh;
@@ -145,6 +149,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 60px;
 }
 
@@ -155,6 +160,7 @@ header {
 .hero-text h1 {
   font-size: 4rem;
   line-height: 1.1;
+
   margin-bottom: 20px;
 }
 
@@ -163,15 +169,18 @@ header {
 }
 
 .hero-text p {
-  font-size: 1.05rem;
-  color: #d1d5db;
-  margin-bottom: 35px;
   max-width: 600px;
+
+  margin-bottom: 35px;
+
+  color: #d6d6d6;
+
+  font-size: 1.05rem;
 }
 
-/* =========================
+/* =========================================
    BUTTONS
-========================= */
+========================================= */
 
 .hero-buttons {
   display: flex;
@@ -180,18 +189,19 @@ header {
 
 .btn {
   padding: 14px 30px;
+
   border-radius: 12px;
 
   font-weight: 600;
 
-  transition: var(--transition);
-
   display: inline-block;
+
+  transition: var(--transition);
 }
 
 .btn-primary {
   background: var(--accent);
-  color: white;
+  color: var(--text);
 }
 
 .btn-primary:hover {
@@ -201,15 +211,16 @@ header {
 
 .btn-secondary {
   border: 2px solid var(--accent);
+  color: var(--text);
 }
 
 .btn-secondary:hover {
   background: var(--accent);
 }
 
-/* =========================
+/* =========================================
    HERO IMAGE
-========================= */
+========================================= */
 
 .hero-image {
   flex: 1;
@@ -240,15 +251,17 @@ header {
 .image-box img {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
 }
 
-/* =========================
+/* =========================================
    SECTION TITLES
-========================= */
+========================================= */
 
 .section-title {
   text-align: center;
+
   margin-bottom: 70px;
 }
 
@@ -260,13 +273,19 @@ header {
   color: var(--accent);
 }
 
-/* =========================
+/* =========================================
    ABOUT
-========================= */
+========================================= */
+
+.about {
+  background: var(--primary);
+}
 
 .about-content {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 40px;
 }
 
@@ -286,13 +305,19 @@ header {
   border: 1px solid var(--accent);
 }
 
-/* =========================
+/* =========================================
    SERVICES
-========================= */
+========================================= */
+
+.services {
+  background: var(--primary);
+}
 
 .services-grid {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 30px;
 }
 
@@ -314,6 +339,7 @@ header {
 
 .service-card i {
   font-size: 2rem;
+
   color: var(--accent);
 
   margin-bottom: 20px;
@@ -323,13 +349,19 @@ header {
   margin-bottom: 15px;
 }
 
-/* =========================
+/* =========================================
    PORTFOLIO
-========================= */
+========================================= */
+
+.portfolio {
+  background: var(--primary);
+}
 
 .portfolio-grid {
   display: grid;
+
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
   gap: 30px;
 }
 
@@ -351,13 +383,19 @@ header {
   padding: 25px;
 }
 
-/* =========================
+/* =========================================
    CONTACT
-========================= */
+========================================= */
+
+.contact {
+  background: var(--primary);
+}
 
 .contact-content {
   display: grid;
+
   grid-template-columns: repeat(2, 1fr);
+
   gap: 40px;
 }
 
@@ -381,6 +419,7 @@ header {
 .contact-form form {
   display: flex;
   flex-direction: column;
+
   gap: 20px;
 }
 
@@ -393,9 +432,9 @@ header {
   border: none;
   border-radius: 10px;
 
-  background: #1f2937;
+  background: #1b2230;
 
-  color: white;
+  color: var(--text);
 
   font-size: 1rem;
 }
@@ -410,33 +449,51 @@ header {
   cursor: pointer;
 }
 
-/* =========================
+/* =========================================
    FOOTER
-========================= */
+========================================= */
 
 footer {
   padding: 30px 0;
 
   text-align: center;
 
+  background: var(--secondary);
+
   border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 footer p {
-  color: #cbd5e1;
+  color: #d6d6d6;
 }
 
-/* =========================
+/* =========================================
+   TEXT COLORS
+========================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+span {
+  color: var(--text);
+}
+
+/* =========================================
    RESPONSIVE
-========================= */
+========================================= */
 
 @media (max-width: 992px) {
 
   .hero-content,
   .about-content,
   .contact-content {
-    grid-template-columns: 1fr;
     display: grid;
+    grid-template-columns: 1fr;
   }
 
   .hero {
@@ -473,7 +530,7 @@ footer p {
   }
 
   .hero-text h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
   }
 
   .section-title h2 {
