@@ -1,62 +1,272 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  background:#0b0d12;
+  color:#ffffff;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.portfolio{
+  overflow:hidden;
+}
+
 /* =========================
-   ADVANCED ANIMATIONS
+   NAVBAR
 ========================= */
 
-/* HERO FLOAT */
+.navbar{
+
+  position:fixed;
+
+  top:0;
+  left:0;
+
+  width:100%;
+
+  display:flex;
+
+  justify-content:space-between;
+  align-items:center;
+
+  padding:24px 80px;
+
+  background:rgba(10,10,15,0.75);
+
+  backdrop-filter:blur(14px);
+
+  z-index:999;
+}
+
+.navbar-logo{
+
+  font-size:1rem;
+
+  font-weight:700;
+
+  letter-spacing:3px;
+}
+
+.navbar-links{
+
+  display:flex;
+
+  gap:32px;
+}
+
+.navbar-links a{
+
+  color:#d7d7d7;
+
+  text-decoration:none;
+
+  transition:0.3s ease;
+}
+
+.navbar-links a:hover{
+
+  color:#E45F26;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+
+  min-height:100vh;
+
+  display:flex;
+
+  align-items:center;
+
+  padding:140px 80px 100px;
+}
 
 .hero-content{
+
+  width:100%;
 
   animation:
     heroFloat 5s ease-in-out infinite;
 }
 
-@keyframes heroFloat{
+.hero-video{
 
-  0%{
-    transform:translateY(0px);
-  }
+  width:100%;
 
-  50%{
-    transform:translateY(-10px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
+  margin-bottom:40px;
 }
 
-/* FADE IN */
+.hero-video video{
 
-.hero,
+  width:100%;
+
+  height:560px;
+
+  object-fit:cover;
+
+  border-radius:32px;
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.4);
+}
+
+.hero-tag{
+
+  color:#E45F26;
+
+  letter-spacing:3px;
+
+  margin-bottom:24px;
+}
+
+.hero h1{
+
+  font-size:4.8rem;
+
+  line-height:1.1;
+
+  max-width:950px;
+
+  margin-bottom:28px;
+}
+
+.hero-description{
+
+  color:#bdbdbd;
+
+  line-height:1.8;
+
+  max-width:760px;
+
+  font-size:1.1rem;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
 .about-section,
 .projects-section,
 .reels-section,
 .contact-section{
 
+  padding:140px 80px;
+
   animation:
     fadeIn 1.2s ease;
 }
 
-@keyframes fadeIn{
+.about-content,
+.projects-header,
+.contact-card{
 
-  from{
+  max-width:1100px;
 
-    opacity:0;
-
-    transform:translateY(40px);
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:translateY(0);
-  }
+  margin:auto;
 }
 
-/* PROJECT IMAGE CINEMATIC */
+.about-tag,
+.projects-tag,
+.contact-tag{
+
+  color:#E45F26;
+
+  letter-spacing:3px;
+
+  margin-bottom:20px;
+}
+
+.about-content h2,
+.projects-header h2,
+.contact-card h2{
+
+  font-size:3rem;
+
+  margin-bottom:32px;
+}
+
+.about-description{
+
+  color:#bdbdbd;
+
+  line-height:1.9;
+
+  margin-bottom:24px;
+
+  max-width:850px;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects-grid{
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(auto-fit,minmax(340px,1fr));
+
+  gap:40px;
+
+  margin-top:80px;
+}
+
+.project-card{
+
+  background:#151821;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  border:1px solid rgba(255,255,255,0.05);
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.2);
+}
+
+.project-card:hover{
+
+  transform:translateY(-14px);
+
+  box-shadow:
+    0 50px 100px rgba(0,0,0,0.45);
+}
+
+.project-gallery{
+
+  display:grid;
+
+  grid-template-columns:1fr 1fr;
+
+  gap:8px;
+
+  padding:8px;
+}
 
 .project-gallery img{
+
+  width:100%;
+
+  height:220px;
+
+  object-fit:cover;
+
+  border-radius:16px;
 
   cursor:pointer;
 
@@ -77,31 +287,105 @@
   filter:brightness(1);
 }
 
-/* CARD MOTION */
+.project-card span{
 
-.project-card{
+  display:block;
+
+  padding:24px 24px 0;
+
+  color:#E45F26;
+
+  font-weight:700;
+}
+
+.project-card h3{
+
+  padding:14px 24px 34px;
+
+  font-size:1.4rem;
+}
+
+/* =========================
+   REELS
+========================= */
+
+.reel-card{
+
+  max-width:1000px;
+
+  margin:80px auto 0;
+}
+
+.reel-card video{
+
+  width:100%;
+
+  border-radius:28px;
 
   transition:
     transform 0.5s ease,
     box-shadow 0.5s ease;
-}
-
-.project-card:hover{
-
-  transform:
-    translateY(-14px);
 
   box-shadow:
-    0 50px 100px rgba(0,0,0,0.45);
+    0 30px 80px rgba(0,0,0,0.35);
 }
 
-/* CONTACT BUTTONS */
+.reel-card video:hover{
+
+  transform:scale(1.01);
+
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.45);
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-card{
+
+  background:#151821;
+
+  padding:60px;
+
+  border-radius:32px;
+
+  border:1px solid rgba(255,255,255,0.05);
+}
+
+.contact-links{
+
+  display:flex;
+
+  gap:24px;
+
+  flex-wrap:wrap;
+
+  margin-top:40px;
+}
 
 .contact-links a{
+
+  padding:16px 28px;
+
+  border-radius:14px;
+
+  background:#E45F26;
+
+  color:#ffffff;
+
+  text-decoration:none;
 
   position:relative;
 
   overflow:hidden;
+
+  transition:0.3s ease;
+}
+
+.contact-links a:hover{
+
+  transform:translateY(-4px);
 }
 
 .contact-links a::before{
@@ -129,21 +413,82 @@
   left:120%;
 }
 
-/* NAVBAR ANIMATION */
+/* =========================
+   FOOTER
+========================= */
 
-.navbar{
+.footer{
 
-  animation:
-    navbarDrop 1s ease;
+  padding:40px;
+
+  text-align:center;
+
+  color:#7d7d7d;
 }
 
-@keyframes navbarDrop{
+/* =========================
+   LIGHTBOX
+========================= */
+
+.lightbox{
+
+  position:fixed;
+
+  inset:0;
+
+  background:
+    rgba(0,0,0,0.92);
+
+  display:flex;
+
+  justify-content:center;
+  align-items:center;
+
+  z-index:9999;
+
+  padding:40px;
+
+  animation:
+    lightboxFade 0.35s ease;
+}
+
+.lightbox img{
+
+  max-width:90%;
+  max-height:90%;
+
+  border-radius:24px;
+
+  animation:
+    zoomIn 0.35s ease;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heroFloat{
+
+  0%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-10px);
+  }
+
+  100%{
+    transform:translateY(0px);
+  }
+}
+
+@keyframes fadeIn{
 
   from{
 
     opacity:0;
 
-    transform:translateY(-30px);
+    transform:translateY(40px);
   }
 
   to{
@@ -152,20 +497,6 @@
 
     transform:translateY(0);
   }
-}
-
-/* LIGHTBOX ANIMATION */
-
-.lightbox{
-
-  animation:
-    lightboxFade 0.35s ease;
-}
-
-.lightbox img{
-
-  animation:
-    zoomIn 0.35s ease;
 }
 
 @keyframes lightboxFade{
@@ -196,19 +527,55 @@
   }
 }
 
-/* REEL HOVER */
+/* =========================
+   MOBILE
+========================= */
 
-.reel-card video{
+@media(max-width:768px){
 
-  transition:
-    transform 0.5s ease,
-    box-shadow 0.5s ease;
-}
+  .navbar{
 
-.reel-card video:hover{
+    padding:20px;
+  }
 
-  transform:scale(1.01);
+  .navbar-links{
 
-  box-shadow:
-    0 40px 90px rgba(0,0,0,0.45);
+    gap:16px;
+  }
+
+  .hero{
+
+    padding:120px 20px 80px;
+  }
+
+  .hero h1{
+
+    font-size:3rem;
+  }
+
+  .hero-video video{
+
+    height:320px;
+  }
+
+  .about-section,
+  .projects-section,
+  .reels-section,
+  .contact-section{
+
+    padding:100px 20px;
+  }
+
+  .about-content h2,
+  .projects-header h2,
+  .contact-card h2{
+
+    font-size:2.2rem;
+  }
+
+  .contact-card{
+
+    padding:36px 24px;
+  }
+
 }
