@@ -1,3 +1,4 @@
+
 import "./App.css"
 
 import { useState } from "react"
@@ -5,10 +6,14 @@ import { useState } from "react"
 import vodacom1 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg"
 import vodacom2 from "./assets/projects/vodacom-mpesa/posts/vodacom-post-2.jpg"
 
+import vodacomReel from "./assets/projects/vodacom-mpesa/reels/vodacom-reel.mp4"
+
 import santal1 from "./assets/projects/santal/posts/santal-1.jpg"
 import santal2 from "./assets/projects/santal/posts/santal-2.jpg"
 import santal3 from "./assets/projects/santal/posts/santal-3.jpg"
 import santal4 from "./assets/projects/santal/posts/santal-4.jpg"
+
+import santalReel from "./assets/projects/santal/reels/santal-reel.mp4"
 
 import parmalat1 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-1.jpg"
 import parmalat2 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-2.jpg"
@@ -59,6 +64,10 @@ function App() {
             Projectos
           </a>
 
+          <a href="#reels">
+            Reels
+          </a>
+
           <a href="#contact">
             Contacto
           </a>
@@ -72,6 +81,18 @@ function App() {
       <section className="hero">
 
         <div className="hero-content">
+
+          <div className="hero-video">
+
+            <video
+              src={vodacomReel}
+              autoPlay
+              muted
+              loop
+              playsInline
+            />
+
+          </div>
 
           <p className="hero-tag">
             MARKETING • BRANDING • SOCIAL MEDIA
@@ -120,6 +141,11 @@ function App() {
             Account Manager e pela Create como Copywriter,
             experiências que reforçaram a minha visão estratégica,
             criatividade e capacidade de comunicação.
+          </p>
+
+          <p className="about-description">
+            Também fui responsável pela gestão e actualização das redes sociais
+            da FACIM 2024, contribuindo para a cobertura e divulgação digital do evento.
           </p>
 
         </div>
@@ -250,6 +276,37 @@ function App() {
             </h3>
 
           </div>
+
+        </div>
+
+      </section>
+
+      {/* REELS */}
+
+      <section
+        className="reels-section"
+        id="reels"
+      >
+
+        <div className="projects-header">
+
+          <p className="projects-tag">
+            REELS
+          </p>
+
+          <h2>
+            Conteúdo em vídeo e campanhas digitais.
+          </h2>
+
+        </div>
+
+        <div className="reel-card">
+
+          <video
+            src={santalReel}
+            controls
+            playsInline
+          />
 
         </div>
 
