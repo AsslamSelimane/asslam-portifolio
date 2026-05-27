@@ -1,24 +1,23 @@
-
 import './App.css'
 import { motion } from 'framer-motion'
 
 /* PARMALAT */
 
-import parmalatCampanha from './assets/projects/parmalat-mocambique/campanhas/parmalat-campanha.jpg'
+import parmalatCampanha from './assets/projects/parmalat-mocambique/campanhas/campanha.jpg'
 
-import parmalatCarousel1 from './assets/projects/parmalat-mocambique/carousels/parmalat-carousel-1.jpg'
-import parmalatCarousel2 from './assets/projects/parmalat-mocambique/carousels/parmalat-carousel-2.jpg'
-import parmalatCarousel3 from './assets/projects/parmalat-mocambique/carousels/parmalat-carousel-3.jpg'
-import parmalatCarousel4 from './assets/projects/parmalat-mocambique/carousels/parmalat-carousel-4.jpg'
-import parmalatCarousel5 from './assets/projects/parmalat-mocambique/carousels/parmalat-carousel-5.jpg'
+import parmalatCarousel1 from './assets/projects/parmalat-mocambique/carousels/corousel-1.jpg'
+import parmalatCarousel2 from './assets/projects/parmalat-mocambique/carousels/corousel-2.jpg'
+import parmalatCarousel3 from './assets/projects/parmalat-mocambique/carousels/corousel-3.jpg'
+import parmalatCarousel4 from './assets/projects/parmalat-mocambique/carousels/corousel-4.jpg'
+import parmalatCarousel5 from './assets/projects/parmalat-mocambique/carousels/corousel-5.jpg'
 
-import parmalatPost1 from './assets/projects/parmalat-mocambique/posts/parmalat-post-1.jpg'
+import parmalatPost1 from './assets/projects/parmalat-mocambique/posts/post-1.jpg'
 
 /* SANTAL */
 
-import santalPost1 from './assets/projects/santal/posts/santal-post-1.jpg'
-import santalPost2 from './assets/projects/santal/posts/santal-post-2.jpg'
-import santalPost3 from './assets/projects/santal/posts/santal-post-3.jpg'
+import santalPost1 from './assets/projects/santal/posts/santal-1.jpg'
+import santalPost2 from './assets/projects/santal/posts/santal-2.jpg'
+import santalPost3 from './assets/projects/santal/posts/santal-3.jpg'
 
 import santalReel from './assets/projects/santal/reels/santal-reel.mp4'
 
@@ -26,28 +25,24 @@ import santalReel from './assets/projects/santal/reels/santal-reel.mp4'
 
 import vodacomPost1 from './assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg'
 import vodacomPost2 from './assets/projects/vodacom-mpesa/posts/vodacom-post-2.jpg'
-import vodacomPost3 from './assets/projects/vodacom-mpesa/posts/vodacom-post-3.jpg'
 
-import vodacomVideo from './assets/projects/vodacom-mpesa/videos/vodacom-hero.mp4'
+import vodacomVideo from './assets/projects/vodacom-mpesa/reels/vodacom-reel.mp4'
 
 /* BIM */
 
-import bimMain from './assets/projects/millennium-bim/posts/millennium-bim-main.jpg'
+import bimMain from './assets/projects/millennium-bim/posts/millenium-bim-main.jpg'
 
 import bim1 from './assets/projects/millennium-bim/carousels/bim-1.jpg'
 import bim2 from './assets/projects/millennium-bim/carousels/bim-2.jpg'
 import bim3 from './assets/projects/millennium-bim/carousels/bim-3.jpg'
 
-import bimPost1 from './assets/projects/millennium-bim/posts/bim-post-1.jpg'
-import bimPost2 from './assets/projects/millennium-bim/posts/bim-post-2.jpg'
-import bimPost3 from './assets/projects/millennium-bim/posts/bim-post-3.jpg'
-import bimPost4 from './assets/projects/millennium-bim/posts/bim-post-4.jpg'
+import bimPost1 from './assets/projects/millennium-bim/posts/post-1jpg.jpg'
+import bimPost2 from './assets/projects/millennium-bim/posts/post-2jpg.jpg'
 
 /* GWM */
 
 import gwmMain from './assets/projects/gwm/campanhas/gwm-main.jpg'
-import gwmPost1 from './assets/projects/gwm/posts/gwm-post-1.jpg'
-import gwmPost2 from './assets/projects/gwm/posts/gwm-post-2.jpg'
+import gwmPost1 from './assets/projects/gwm/posts/post-1jpg.jpg'
 
 /* EMOSE */
 
@@ -81,8 +76,6 @@ function App() {
 
   return (
     <div className="app">
-
-      {/* NAVBAR */}
 
       <header className="navbar">
 
@@ -127,27 +120,11 @@ function App() {
 
           <p>
             Profissional focado em branding,
-            gestão de redes sociais,
             campanhas digitais,
+            social media,
             comunicação estratégica
             e criação de conteúdos.
           </p>
-
-          <div className="hero-buttons">
-
-            <a href="#portfolio">
-              <button className="primary">
-                Ver Trabalhos
-              </button>
-            </a>
-
-            <a href="#contacto">
-              <button className="secondary">
-                Contactar
-              </button>
-            </a>
-
-          </div>
 
         </motion.div>
 
@@ -155,13 +132,9 @@ function App() {
 
       {/* SOBRE */}
 
-      <motion.section
+      <section
         className="about"
         id="sobre"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
       >
 
         <span className="section-tag">
@@ -173,33 +146,19 @@ function App() {
         </h2>
 
         <p>
-          Sou profissional de marketing e comunicação
-          com experiência em gestão de redes sociais,
-          copywriting, branding,
-          campanhas institucionais
-          e cobertura digital de eventos.
+          Trabalho com marketing,
+          branding,
+          comunicação institucional
+          e gestão de redes sociais.
         </p>
 
-        <p>
-          Trabalhei com marcas como Vodacom M-Pesa,
-          Santal, Parmalat Moçambique,
-          Millennium BIM,
-          EMOSE,
-          GWM
-          e Companhia Industrial da Matola.
-        </p>
-
-      </motion.section>
+      </section>
 
       {/* SKILLS */}
 
-      <motion.section
+      <section
         className="skills"
         id="skills"
-        variants={fadeUp}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
       >
 
         <span className="section-tag">
@@ -214,43 +173,23 @@ function App() {
 
           <div className="skill-card">
             <h3>Social Media</h3>
-
-            <p>
-              Gestão estratégica de redes sociais
-              e crescimento digital.
-            </p>
           </div>
 
           <div className="skill-card">
             <h3>Copywriting</h3>
-
-            <p>
-              Desenvolvimento de textos
-              persuasivos e institucionais.
-            </p>
           </div>
 
           <div className="skill-card">
             <h3>Branding</h3>
-
-            <p>
-              Construção visual e posicionamento
-              estratégico de marcas.
-            </p>
           </div>
 
           <div className="skill-card">
             <h3>Marketing Digital</h3>
-
-            <p>
-              Criação de campanhas focadas
-              em alcance e engajamento.
-            </p>
           </div>
 
         </div>
 
-      </motion.section>
+      </section>
 
       {/* PORTFOLIO */}
 
@@ -271,19 +210,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              Vodacom M-Pesa
-            </h3>
-
-            <p>
-              Conteúdos digitais,
-              campanhas visuais
-              e vídeos promocionais.
-            </p>
-
-          </div>
+          <h3>
+            Vodacom M-Pesa
+          </h3>
 
           <video
             className="hero-video"
@@ -291,14 +220,13 @@ function App() {
             autoPlay
             muted
             loop
-            playsInline
+            controls
           />
 
           <div className="gallery-grid">
 
             <img src={vodacomPost1} />
             <img src={vodacomPost2} />
-            <img src={vodacomPost3} />
 
           </div>
 
@@ -308,18 +236,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              Santal
-            </h3>
-
-            <p>
-              Gestão de conteúdos visuais,
-              posts e reels promocionais.
-            </p>
-
-          </div>
+          <h3>
+            Santal
+          </h3>
 
           <video
             className="reel-video"
@@ -341,18 +260,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              Parmalat Moçambique
-            </h3>
-
-            <p>
-              Campanhas digitais,
-              carrosseis e conteúdos promocionais.
-            </p>
-
-          </div>
+          <h3>
+            Parmalat Moçambique
+          </h3>
 
           <img
             className="campaign-image"
@@ -381,18 +291,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              Millennium BIM
-            </h3>
-
-            <p>
-              Campanhas institucionais,
-              posts e carrosseis digitais.
-            </p>
-
-          </div>
+          <h3>
+            Millennium BIM
+          </h3>
 
           <img
             className="campaign-image"
@@ -411,8 +312,6 @@ function App() {
 
             <img src={bimPost1} />
             <img src={bimPost2} />
-            <img src={bimPost3} />
-            <img src={bimPost4} />
 
           </div>
 
@@ -422,18 +321,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              GWM
-            </h3>
-
-            <p>
-              Conteúdos promocionais
-              para comunicação digital.
-            </p>
-
-          </div>
+          <h3>
+            GWM
+          </h3>
 
           <img
             className="campaign-image"
@@ -443,7 +333,6 @@ function App() {
           <div className="gallery-grid">
 
             <img src={gwmPost1} />
-            <img src={gwmPost2} />
 
           </div>
 
@@ -453,18 +342,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              EMOSE
-            </h3>
-
-            <p>
-              Desenvolvimento
-              de conteúdos institucionais.
-            </p>
-
-          </div>
+          <h3>
+            EMOSE
+          </h3>
 
           <img
             className="campaign-image"
@@ -477,18 +357,9 @@ function App() {
 
         <div className="brand-section">
 
-          <div className="brand-header">
-
-            <h3>
-              Companhia Industrial da Matola
-            </h3>
-
-            <p>
-              Carrosseis institucionais
-              e comunicação visual.
-            </p>
-
-          </div>
+          <h3>
+            Companhia Industrial da Matola
+          </h3>
 
           <div className="carousel-grid">
 
@@ -554,17 +425,6 @@ function App() {
         </div>
 
       </section>
-
-      {/* FOOTER */}
-
-      <footer className="footer">
-
-        <p>
-          © 2026 Asslam Selimane.
-          Todos os direitos reservados.
-        </p>
-
-      </footer>
 
     </div>
   )
