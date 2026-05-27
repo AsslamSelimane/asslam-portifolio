@@ -4,14 +4,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #020617;
   font-family: Arial, Helvetica, sans-serif;
   color: white;
-}
-
-html {
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 .app {
@@ -26,11 +27,21 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  backdrop-filter: blur(12px);
+  background: rgba(2, 6, 23, 0.8);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .logo {
   font-size: 28px;
   color: #38bdf8;
+  font-weight: bold;
 }
 
 nav {
@@ -43,21 +54,37 @@ nav a {
   color: #cbd5e1;
   transition: 0.3s;
   font-size: 16px;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
 }
 
 nav a:hover {
   color: #38bdf8;
 }
 
+nav a:hover::after {
+  width: 100%;
+}
+
 /* HERO */
 
 .hero {
-  min-height: 85vh;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 60px;
-  max-width: 900px;
+  max-width: 950px;
 }
 
 .tag,
@@ -65,17 +92,21 @@ nav a:hover {
   color: #38bdf8;
   margin-bottom: 20px;
   font-size: 14px;
-  letter-spacing: 3px;
+  letter-spacing: 4px;
+  font-weight: bold;
 }
 
 .hero h1 {
-  font-size: 80px;
+  font-size: 90px;
   margin-bottom: 20px;
   line-height: 1;
+  background: linear-gradient(to right, white, #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero h2 {
-  font-size: 32px;
+  font-size: 34px;
   color: #94a3b8;
   margin-bottom: 25px;
 }
@@ -84,11 +115,13 @@ nav a:hover {
 .about p,
 .contact p {
   font-size: 20px;
-  line-height: 1.7;
+  line-height: 1.9;
   color: #cbd5e1;
-  max-width: 700px;
+  max-width: 750px;
   margin-bottom: 40px;
 }
+
+/* BUTTONS */
 
 .buttons {
   display: flex;
@@ -96,8 +129,8 @@ nav a:hover {
 }
 
 button {
-  padding: 15px 30px;
-  border-radius: 12px;
+  padding: 16px 34px;
+  border-radius: 14px;
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -108,6 +141,7 @@ button {
 .primary {
   background: #38bdf8;
   color: #020617;
+  box-shadow: 0 10px 30px rgba(56, 189, 248, 0.3);
 }
 
 .secondary {
@@ -117,63 +151,72 @@ button {
 }
 
 button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 /* SECTIONS */
 
 .about,
 .projects {
-  background: #0f172a;
+  background: #071120;
 }
 
 .about,
 .skills,
 .projects,
 .contact {
-  padding: 100px 60px;
+  padding: 120px 60px;
 }
 
 .about h2,
 .skills h2,
 .projects h2,
 .contact h2 {
-  font-size: 48px;
+  font-size: 54px;
   margin-top: 20px;
   margin-bottom: 30px;
   line-height: 1.2;
 }
 
-/* SKILLS + PROJECTS */
+/* GRID */
 
 .skills-grid,
 .projects-grid,
 .contact-info {
-  margin-top: 50px;
+  margin-top: 60px;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
   gap: 30px;
 }
+
+/* CARDS */
 
 .skill-card,
 .project-card,
 .contact-card {
-  background: #0f172a;
-  padding: 35px;
-  border-radius: 20px;
-  transition: 0.3s;
-  border: 1px solid transparent;
-}
+  background: rgba(15, 23, 42, 0.8);
 
-.contact-card {
-  background: #111c34;
+  padding: 40px;
+
+  border-radius: 24px;
+
+  transition: 0.4s;
+
+  border: 1px solid rgba(255, 255, 255, 0.05);
+
+  backdrop-filter: blur(10px);
 }
 
 .skill-card:hover,
 .project-card:hover,
 .contact-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
+
   border-color: #38bdf8;
+
+  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
 }
 
 .skill-card h3,
@@ -187,7 +230,7 @@ button:hover {
 .project-card p,
 .contact-card span {
   color: #cbd5e1;
-  line-height: 1.7;
+  line-height: 1.8;
   font-size: 17px;
 }
 
@@ -196,7 +239,7 @@ button:hover {
 .footer {
   padding: 40px;
   text-align: center;
-  border-top: 1px solid #1e293b;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .footer p {
@@ -213,16 +256,21 @@ button:hover {
     gap: 20px;
   }
 
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
   .hero,
   .about,
   .skills,
   .projects,
   .contact {
-    padding: 60px 30px;
+    padding: 80px 30px;
   }
 
   .hero h1 {
-    font-size: 52px;
+    font-size: 56px;
   }
 
   .hero h2 {
@@ -233,10 +281,16 @@ button:hover {
   .skills h2,
   .projects h2,
   .contact h2 {
-    font-size: 36px;
+    font-size: 38px;
   }
 
   .buttons {
     flex-direction: column;
+  }
+
+  .hero p,
+  .about p,
+  .contact p {
+    font-size: 18px;
   }
 }
