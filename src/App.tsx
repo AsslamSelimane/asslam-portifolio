@@ -295,7 +295,7 @@ function App() {
             <h3>Telefone</h3>
 
             <span>
-              +258 84 241 4726
+              +258 84 241 4872
             </span>
           </motion.div>
 
