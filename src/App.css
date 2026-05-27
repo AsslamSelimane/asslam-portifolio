@@ -60,7 +60,8 @@ nav a:hover {
   max-width: 900px;
 }
 
-.tag {
+.tag,
+.section-tag {
   color: #38bdf8;
   margin-bottom: 20px;
   font-size: 14px;
@@ -79,7 +80,9 @@ nav a:hover {
   margin-bottom: 25px;
 }
 
-.hero p {
+.hero p,
+.about p,
+.contact p {
   font-size: 20px;
   line-height: 1.7;
   color: #cbd5e1;
@@ -117,47 +120,35 @@ button:hover {
   transform: translateY(-3px);
 }
 
-/* ABOUT */
+/* SECTIONS */
 
-.about {
-  padding: 100px 60px;
+.about,
+.projects {
   background: #0f172a;
 }
 
-.about-text {
-  max-width: 900px;
-}
-
-.section-tag {
-  color: #38bdf8;
-  letter-spacing: 3px;
-  font-size: 14px;
+.about,
+.skills,
+.projects,
+.contact {
+  padding: 100px 60px;
 }
 
 .about h2,
 .skills h2,
-.projects h2 {
+.projects h2,
+.contact h2 {
   font-size: 48px;
   margin-top: 20px;
   margin-bottom: 30px;
   line-height: 1.2;
 }
 
-.about p {
-  color: #cbd5e1;
-  font-size: 20px;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-
-/* SKILLS */
-
-.skills {
-  padding: 100px 60px;
-}
+/* SKILLS + PROJECTS */
 
 .skills-grid,
-.projects-grid {
+.projects-grid,
+.contact-info {
   margin-top: 50px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -165,7 +156,8 @@ button:hover {
 }
 
 .skill-card,
-.project-card {
+.project-card,
+.contact-card {
   background: #0f172a;
   padding: 35px;
   border-radius: 20px;
@@ -173,30 +165,42 @@ button:hover {
   border: 1px solid transparent;
 }
 
+.contact-card {
+  background: #111c34;
+}
+
 .skill-card:hover,
-.project-card:hover {
+.project-card:hover,
+.contact-card:hover {
   transform: translateY(-8px);
   border-color: #38bdf8;
 }
 
 .skill-card h3,
-.project-card h3 {
+.project-card h3,
+.contact-card h3 {
   font-size: 24px;
   margin-bottom: 20px;
 }
 
 .skill-card p,
-.project-card p {
+.project-card p,
+.contact-card span {
   color: #cbd5e1;
   line-height: 1.7;
   font-size: 17px;
 }
 
-/* PROJECTS */
+/* FOOTER */
 
-.projects {
-  padding: 100px 60px;
-  background: #0f172a;
+.footer {
+  padding: 40px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+}
+
+.footer p {
+  color: #94a3b8;
 }
 
 /* RESPONSIVO */
@@ -212,7 +216,8 @@ button:hover {
   .hero,
   .about,
   .skills,
-  .projects {
+  .projects,
+  .contact {
     padding: 60px 30px;
   }
 
@@ -226,12 +231,9 @@ button:hover {
 
   .about h2,
   .skills h2,
-  .projects h2 {
+  .projects h2,
+  .contact h2 {
     font-size: 36px;
-  }
-
-  .about p {
-    font-size: 18px;
   }
 
   .buttons {

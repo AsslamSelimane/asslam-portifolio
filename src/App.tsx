@@ -14,6 +14,7 @@ function App() {
           <a href="#">Sobre</a>
           <a href="#">Skills</a>
           <a href="#">Projectos</a>
+          <a href="#">Contacto</a>
         </nav>
       </header>
 
@@ -175,6 +176,53 @@ function App() {
         </div>
 
       </section>
+
+      {/* CONTACT */}
+
+      <section className="contact">
+
+        <span className="section-tag">
+          CONTACTO
+        </span>
+
+        <h2>
+          Vamos trabalhar juntos.
+        </h2>
+
+        <p>
+          Disponível para oportunidades,
+          projectos e colaborações na área de
+          marketing, comunicação e social media.
+        </p>
+
+        <div className="contact-info">
+
+          <div className="contact-card">
+            <h3>Email</h3>
+            <span>asslam@email.com</span>
+          </div>
+
+          <div className="contact-card">
+            <h3>Telefone</h3>
+            <span>+258 84 000 0000</span>
+          </div>
+
+          <div className="contact-card">
+            <h3>Localização</h3>
+            <span>Maputo, Moçambique</span>
+          </div>
+
+        </div>
+
+      </section>
+
+      {/* FOOTER */}
+
+      <footer className="footer">
+        <p>
+          © 2026 Asslam Selimane. Todos os direitos reservados.
+        </p>
+      </footer>
 
     </div>
   )
