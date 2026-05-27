@@ -113,9 +113,41 @@ button:hover {
   transform: translateY(-3px);
 }
 
+/* ABOUT */
+
+.about {
+  padding: 100px 60px;
+  background: #0f172a;
+}
+
+.about-text {
+  max-width: 900px;
+}
+
+.section-tag {
+  color: #38bdf8;
+  letter-spacing: 3px;
+  font-size: 14px;
+}
+
+.about h2 {
+  font-size: 48px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.about p {
+  color: #cbd5e1;
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
 /* RESPONSIVO */
 
 @media (max-width: 768px) {
+
   .navbar {
     padding: 25px;
     flex-direction: column;
@@ -136,5 +168,17 @@ button:hover {
 
   .buttons {
     flex-direction: column;
+  }
+
+  .about {
+    padding: 60px 30px;
+  }
+
+  .about h2 {
+    font-size: 36px;
+  }
+
+  .about p {
+    font-size: 18px;
   }
 }
