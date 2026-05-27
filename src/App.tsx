@@ -28,6 +28,32 @@ function App() {
   return (
     <main className="portfolio">
 
+      {/* NAVBAR */}
+
+      <nav className="navbar">
+
+        <div className="navbar-logo">
+          ASSLAM
+        </div>
+
+        <div className="navbar-links">
+
+          <a href="#about">
+            Sobre
+          </a>
+
+          <a href="#projects">
+            Projectos
+          </a>
+
+          <a href="#contact">
+            Contacto
+          </a>
+
+        </div>
+
+      </nav>
+
       {/* HERO */}
 
       <section className="hero">
@@ -54,7 +80,10 @@ function App() {
 
       {/* ABOUT */}
 
-      <section className="about-section">
+      <section
+        className="about-section"
+        id="about"
+      >
 
         <div className="about-content">
 
@@ -91,7 +120,10 @@ function App() {
 
       {/* PROJECTS */}
 
-      <section className="projects-section">
+      <section
+        className="projects-section"
+        id="projects"
+      >
 
         <div className="projects-header">
 
@@ -106,8 +138,6 @@ function App() {
         </div>
 
         <div className="projects-grid">
-
-          {/* VODACOM */}
 
           <div className="project-card">
 
@@ -124,13 +154,7 @@ function App() {
               Vodacom M-Pesa
             </h3>
 
-            <p>
-              Desenvolvimento de campanhas digitais e conteúdos estratégicos para redes sociais.
-            </p>
-
           </div>
-
-          {/* SANTAL */}
 
           <div className="project-card">
 
@@ -149,13 +173,7 @@ function App() {
               Santal
             </h3>
 
-            <p>
-              Produção de conteúdo criativo e campanhas visuais para presença digital da marca.
-            </p>
-
           </div>
-
-          {/* PARMALAT */}
 
           <div className="project-card">
 
@@ -175,21 +193,15 @@ function App() {
               Parmalat Moçambique
             </h3>
 
-            <p>
-              Comunicação visual e conteúdo digital voltado para campanhas promocionais.
-            </p>
-
           </div>
-
-          {/* BIM */}
 
           <div className="project-card">
 
             <div className="project-gallery">
 
-              <img src={bim1} alt="Millennium BIM" />
-              <img src={bim2} alt="Millennium BIM" />
-              <img src={bim3} alt="Millennium BIM" />
+              <img src={bim1} alt="BIM" />
+              <img src={bim2} alt="BIM" />
+              <img src={bim3} alt="BIM" />
 
             </div>
 
@@ -199,13 +211,7 @@ function App() {
               Millennium BIM
             </h3>
 
-            <p>
-              Conteúdo promocional e comunicação digital para redes sociais.
-            </p>
-
           </div>
-
-          {/* CIM */}
 
           <div className="project-card">
 
@@ -225,10 +231,6 @@ function App() {
               Companhia Industrial da Matola
             </h3>
 
-            <p>
-              Criação de conteúdos institucionais e campanhas digitais.
-            </p>
-
           </div>
 
         </div>
@@ -237,7 +239,10 @@ function App() {
 
       {/* CONTACT */}
 
-      <section className="contact-section">
+      <section
+        className="contact-section"
+        id="contact"
+      >
 
         <div className="contact-card">
 
@@ -249,31 +254,17 @@ function App() {
             Vamos construir algo relevante juntos.
           </h2>
 
-          <p className="contact-description">
-            Disponível para oportunidades profissionais,
-            colaborações e projectos criativos.
-          </p>
-
           <div className="contact-links">
 
-            <a
-              href="mailto:asslamselemane@gmail.com"
-              target="_blank"
-            >
+            <a href="mailto:asslamselemane@gmail.com">
               Email
             </a>
 
-            <a
-              href="https://www.linkedin.com/in/asslam-selimane-394189211"
-              target="_blank"
-            >
+            <a href="https://www.linkedin.com/in/asslam-selimane-394189211">
               LinkedIn
             </a>
 
-            <a
-              href="https://wa.me/258842414872"
-              target="_blank"
-            >
+            <a href="https://wa.me/258842414872">
               WhatsApp
             </a>
 
@@ -282,6 +273,16 @@ function App() {
         </div>
 
       </section>
+
+      {/* FOOTER */}
+
+      <footer className="footer">
+
+        <p>
+          © 2026 Asslam Selimane — Marketing & Branding Portfolio
+        </p>
+
+      </footer>
 
     </main>
   )
