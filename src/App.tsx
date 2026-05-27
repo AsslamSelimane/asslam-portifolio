@@ -1,6 +1,24 @@
 import './App.css'
+import { motion } from 'framer-motion'
 
 function App() {
+
+  const fadeUp = {
+    hidden: {
+      opacity: 0,
+      y: 60,
+    },
+
+    visible: {
+      opacity: 1,
+      y: 0,
+
+      transition: {
+        duration: 0.8,
+      },
+    },
+  }
+
   return (
     <div className="app">
 
@@ -20,19 +38,30 @@ function App() {
 
       {/* HERO */}
 
-      <section className="hero">
-        <span className="tag">PORTFÓLIO PROFISSIONAL</span>
+      <motion.section
+        className="hero"
+        variants={fadeUp}
+        initial="hidden"
+        animate="visible"
+      >
+        <span className="tag">
+          PORTFÓLIO PROFISSIONAL
+        </span>
 
         <h1>Asslam Selimane</h1>
 
-        <h2>Marketing • Comunicação • Social Media</h2>
+        <h2>
+          Marketing • Comunicação • Social Media • Copywriting • Account Manager  
+        </h2>
 
         <p>
-          Profissional focado em marketing digital, branding,
-          comunicação estratégica e gestão de redes sociais.
+          Profissional focado em marketing digital,
+          branding, comunicação estratégica e gestão
+          de redes sociais.
         </p>
 
         <div className="buttons">
+
           <button className="primary">
             Ver Projectos
           </button>
@@ -40,12 +69,20 @@ function App() {
           <button className="secondary">
             Contactar
           </button>
+
         </div>
-      </section>
+
+      </motion.section>
 
       {/* ABOUT */}
 
-      <section className="about">
+      <motion.section
+        className="about"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
 
         <div className="about-text">
 
@@ -58,24 +95,31 @@ function App() {
           </h2>
 
           <p>
-            Sou um profissional de marketing e comunicação com experiência
-            em gestão de redes sociais, branding, copywriting e cobertura
-            de eventos institucionais.
+            Sou um profissional de marketing e comunicação
+            com experiência em gestão de redes sociais,
+            branding, copywriting e cobertura de eventos
+            institucionais.
           </p>
 
           <p>
-            Já trabalhei com plataformas como Facebook, Instagram,
-            WhatsApp e Twitter, ajudando marcas e projectos
-            a melhorarem a sua presença digital.
+            Já trabalhei com plataformas como Facebook,
+            Instagram, WhatsApp e Twitter, ajudando marcas
+            e projectos a melhorarem a sua presença digital.
           </p>
 
         </div>
 
-      </section>
+      </motion.section>
 
       {/* SKILLS */}
 
-      <section className="skills">
+      <motion.section
+        className="skills"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
 
         <span className="section-tag">
           COMPETÊNCIAS
@@ -87,49 +131,67 @@ function App() {
 
         <div className="skills-grid">
 
-          <div className="skill-card">
+          <motion.div
+            className="skill-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Social Media</h3>
 
             <p>
               Gestão estratégica de redes sociais,
               criação de conteúdo e crescimento digital.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="skill-card">
+          <motion.div
+            className="skill-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Copywriting</h3>
 
             <p>
               Desenvolvimento de textos persuasivos
               para campanhas e comunicação digital.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="skill-card">
+          <motion.div
+            className="skill-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Branding</h3>
 
             <p>
               Construção de identidade visual
               e posicionamento de marcas.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="skill-card">
+          <motion.div
+            className="skill-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Marketing Digital</h3>
 
             <p>
               Estratégias digitais focadas
               em alcance, engajamento e conversão.
             </p>
-          </div>
+          </motion.div>
 
         </div>
 
-      </section>
+      </motion.section>
 
       {/* PROJECTS */}
 
-      <section className="projects">
+      <motion.section
+        className="projects"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
 
         <span className="section-tag">
           EXPERIÊNCIA
@@ -141,18 +203,24 @@ function App() {
 
         <div className="projects-grid">
 
-          <div className="project-card">
+          <motion.div
+            className="project-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>FACIM 2024</h3>
 
             <p>
               Cobertura digital da FACIM 2024,
               incluindo gestão de conteúdos,
-              actualização de redes sociais
-              e apoio ao Gabinete de Imprensa.
+              actualização de redes sociais e
+              apoio ao Gabinete de Imprensa.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="project-card">
+          <motion.div
+            className="project-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Publicus</h3>
 
             <p>
@@ -161,9 +229,12 @@ function App() {
               actualização de perfis digitais
               e estratégias de engajamento.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="project-card">
+          <motion.div
+            className="project-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Copywriting Institucional</h3>
 
             <p>
@@ -171,15 +242,21 @@ function App() {
               estratégicos para campanhas,
               jornais institucionais e comunicação.
             </p>
-          </div>
+          </motion.div>
 
         </div>
 
-      </section>
+      </motion.section>
 
       {/* CONTACT */}
 
-      <section className="contact">
+      <motion.section
+        className="contact"
+        variants={fadeUp}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
 
         <span className="section-tag">
           CONTACTO
@@ -197,30 +274,40 @@ function App() {
 
         <div className="contact-info">
 
-          <div className="contact-card">
+          <motion.div
+            className="contact-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Email</h3>
             <span>asslam@email.com</span>
-          </div>
+          </motion.div>
 
-          <div className="contact-card">
+          <motion.div
+            className="contact-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Telefone</h3>
             <span>+258 84 000 0000</span>
-          </div>
+          </motion.div>
 
-          <div className="contact-card">
+          <motion.div
+            className="contact-card"
+            whileHover={{ scale: 1.04 }}
+          >
             <h3>Localização</h3>
             <span>Maputo, Moçambique</span>
-          </div>
+          </motion.div>
 
         </div>
 
-      </section>
+      </motion.section>
 
       {/* FOOTER */}
 
       <footer className="footer">
         <p>
-          © 2026 Asslam Selimane. Todos os direitos reservados.
+          © 2026 Asslam Selimane.
+          Todos os direitos reservados.
         </p>
       </footer>
 
