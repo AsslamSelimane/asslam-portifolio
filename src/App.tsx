@@ -2,6 +2,16 @@ import "./App.css"
 
 import vodacomImage from "./assets/projects/vodacom-mpesa/posts/vodacom-post-1.jpg"
 
+import santal1 from "./assets/projects/santal/posts/santal-1.jpg"
+import santal2 from "./assets/projects/santal/posts/santal-2.jpg"
+
+import parmalat1 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-1.jpg"
+import parmalat2 from "./assets/projects/Parmalat Moçambique/carousels/parmalat-2.jpg"
+
+import bim1 from "./assets/projects/millennium bim/carousels/bim-1.jpg"
+
+import cim1 from "./assets/projects/companhia industrial da matola/carousels/cim-1.jpg"
+
 function App() {
   return (
     <main className="portfolio">
@@ -85,11 +95,13 @@ function App() {
 
         <div className="projects-grid">
 
+          {/* VODACOM */}
+
           <div className="project-card">
 
             <img
               src={vodacomImage}
-              alt="Vodacom M-Pesa"
+              alt="Vodacom"
             />
 
             <span>01</span>
@@ -104,7 +116,24 @@ function App() {
 
           </div>
 
+          {/* SANTAL */}
+
           <div className="project-card">
+
+            <div className="project-gallery">
+
+              <img
+                src={santal1}
+                alt="Santal"
+              />
+
+              <img
+                src={santal2}
+                alt="Santal"
+              />
+
+            </div>
+
             <span>02</span>
 
             <h3>
@@ -114,9 +143,27 @@ function App() {
             <p>
               Produção de conteúdo criativo e campanhas visuais para presença digital da marca.
             </p>
+
           </div>
 
+          {/* PARMALAT */}
+
           <div className="project-card">
+
+            <div className="project-gallery">
+
+              <img
+                src={parmalat1}
+                alt="Parmalat"
+              />
+
+              <img
+                src={parmalat2}
+                alt="Parmalat"
+              />
+
+            </div>
+
             <span>03</span>
 
             <h3>
@@ -126,9 +173,18 @@ function App() {
             <p>
               Comunicação visual e conteúdo digital voltado para campanhas promocionais.
             </p>
+
           </div>
 
+          {/* BIM */}
+
           <div className="project-card">
+
+            <img
+              src={bim1}
+              alt="Millennium BIM"
+            />
+
             <span>04</span>
 
             <h3>
@@ -138,9 +194,18 @@ function App() {
             <p>
               Conteúdo promocional e comunicação digital para redes sociais.
             </p>
+
           </div>
 
+          {/* CIM */}
+
           <div className="project-card">
+
+            <img
+              src={cim1}
+              alt="CIM"
+            />
+
             <span>05</span>
 
             <h3>
@@ -150,6 +215,7 @@ function App() {
             <p>
               Criação de conteúdos institucionais e campanhas digitais.
             </p>
+
           </div>
 
         </div>
