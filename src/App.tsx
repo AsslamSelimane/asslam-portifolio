@@ -69,6 +69,40 @@ function App() {
 
       </section>
 
+      <section className="contact">
+        <h2>Contacto</h2>
+
+        <p>
+          Disponível para oportunidades profissionais,
+          colaborações e projectos criativos.
+        </p>
+
+        <div className="contact-links">
+
+          <a
+            href="mailto:asslamselemane@gmail.com"
+            target="_blank"
+          >
+            Email
+          </a>
+
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://wa.me/258842414872"
+            target="_blank"
+          >
+            WhatsApp
+          </a>
+
+        </div>
+      </section>
+
     </div>
   )
 }
