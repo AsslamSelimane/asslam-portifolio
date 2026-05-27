@@ -1,370 +1,214 @@
 /* =========================
-   NAVBAR
+   ADVANCED ANIMATIONS
 ========================= */
 
-html{
-
-  scroll-behavior:smooth;
-}
-
-.navbar{
-
-  position:fixed;
-
-  top:0;
-  left:0;
-
-  width:100%;
-
-  display:flex;
-
-  justify-content:space-between;
-  align-items:center;
-
-  padding:24px 80px;
-
-  background:rgba(10,10,15,0.7);
-
-  backdrop-filter:blur(14px);
-
-  z-index:999;
-}
-
-.navbar-logo{
-
-  font-size:1rem;
-
-  font-weight:700;
-
-  letter-spacing:3px;
-
-  color:#ffffff;
-}
-
-.navbar-links{
-
-  display:flex;
-
-  gap:32px;
-}
-
-.navbar-links a{
-
-  color:#d7d7d7;
-
-  text-decoration:none;
-
-  font-size:0.95rem;
-
-  transition:0.3s ease;
-}
-
-.navbar-links a:hover{
-
-  color:#E45F26;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-
-  min-height:100vh;
-
-  display:flex;
-
-  align-items:center;
-
-  padding:0 80px;
-
-  position:relative;
-}
+/* HERO FLOAT */
 
 .hero-content{
 
-  max-width:850px;
+  animation:
+    heroFloat 5s ease-in-out infinite;
 }
 
-.hero-tag{
+@keyframes heroFloat{
 
-  color:#E45F26;
+  0%{
+    transform:translateY(0px);
+  }
 
-  letter-spacing:3px;
+  50%{
+    transform:translateY(-10px);
+  }
 
-  margin-bottom:24px;
-
-  font-size:0.9rem;
+  100%{
+    transform:translateY(0px);
+  }
 }
 
-.hero h1{
+/* FADE IN */
 
-  font-size:4.8rem;
-
-  line-height:1.1;
-
-  margin-bottom:32px;
-
-  color:#ffffff;
-}
-
-.hero-description{
-
-  max-width:700px;
-
-  color:#bdbdbd;
-
-  line-height:1.8;
-
-  font-size:1.1rem;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-
+.hero,
 .about-section,
 .projects-section,
+.reels-section,
 .contact-section{
 
-  padding:140px 80px;
+  animation:
+    fadeIn 1.2s ease;
 }
 
-.about-content,
-.projects-header,
-.contact-card{
+@keyframes fadeIn{
 
-  max-width:1100px;
+  from{
 
-  margin:auto;
+    opacity:0;
+
+    transform:translateY(40px);
+  }
+
+  to{
+
+    opacity:1;
+
+    transform:translateY(0);
+  }
 }
 
-.about-tag,
-.projects-tag,
-.contact-tag{
-
-  color:#E45F26;
-
-  letter-spacing:3px;
-
-  margin-bottom:20px;
-
-  font-size:0.9rem;
-}
-
-.about-content h2,
-.projects-header h2,
-.contact-card h2{
-
-  font-size:3rem;
-
-  color:#ffffff;
-
-  margin-bottom:32px;
-}
-
-.about-description,
-.contact-description{
-
-  color:#bdbdbd;
-
-  line-height:1.9;
-
-  margin-bottom:24px;
-
-  max-width:800px;
-}
-
-/* =========================
-   PROJECTS
-========================= */
-
-.projects-grid{
-
-  display:grid;
-
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-
-  gap:40px;
-
-  margin-top:80px;
-}
-
-.project-card{
-
-  background:#151821;
-
-  border:1px solid rgba(255,255,255,0.05);
-
-  border-radius:24px;
-
-  overflow:hidden;
-
-  transition:0.4s ease;
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,0.2);
-}
-
-.project-card:hover{
-
-  transform:translateY(-10px);
-
-  box-shadow:
-    0 40px 90px rgba(0,0,0,0.35);
-}
-
-.project-gallery{
-
-  display:grid;
-
-  grid-template-columns:1fr 1fr;
-
-  gap:8px;
-
-  padding:8px;
-}
+/* PROJECT IMAGE CINEMATIC */
 
 .project-gallery img{
 
-  width:100%;
+  cursor:pointer;
 
-  height:220px;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease;
+}
 
-  object-fit:cover;
+.project-gallery:hover img{
 
-  border-radius:16px;
-
-  transition:0.4s ease;
+  filter:brightness(0.7);
 }
 
 .project-gallery img:hover{
 
-  transform:scale(1.03);
+  transform:scale(1.06);
+
+  filter:brightness(1);
 }
 
-.project-card span{
+/* CARD MOTION */
 
-  display:block;
+.project-card{
 
-  padding:24px 24px 0;
-
-  color:#E45F26;
-
-  font-weight:700;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
 }
 
-.project-card h3{
+.project-card:hover{
 
-  padding:12px 24px 32px;
+  transform:
+    translateY(-14px);
 
-  color:#ffffff;
-
-  font-size:1.4rem;
+  box-shadow:
+    0 50px 100px rgba(0,0,0,0.45);
 }
 
-/* =========================
-   CONTACT
-========================= */
-
-.contact-card{
-
-  background:#151821;
-
-  padding:60px;
-
-  border-radius:32px;
-
-  border:1px solid rgba(255,255,255,0.05);
-}
-
-.contact-links{
-
-  display:flex;
-
-  gap:24px;
-
-  margin-top:40px;
-
-  flex-wrap:wrap;
-}
+/* CONTACT BUTTONS */
 
 .contact-links a{
 
-  padding:16px 28px;
+  position:relative;
 
-  border-radius:14px;
-
-  background:#E45F26;
-
-  color:#ffffff;
-
-  text-decoration:none;
-
-  transition:0.3s ease;
+  overflow:hidden;
 }
 
-.contact-links a:hover{
+.contact-links a::before{
 
-  transform:translateY(-4px);
+  content:'';
+
+  position:absolute;
+
+  top:0;
+  left:-120%;
+
+  width:100%;
+  height:100%;
+
+  background:
+    rgba(255,255,255,0.15);
+
+  transform:skewX(-25deg);
+
+  transition:0.7s ease;
 }
 
-/* =========================
-   FOOTER
-========================= */
+.contact-links a:hover::before{
 
-.footer{
-
-  padding:40px;
-
-  text-align:center;
-
-  color:#7d7d7d;
+  left:120%;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* NAVBAR ANIMATION */
 
-@media(max-width:768px){
+.navbar{
 
-  .navbar{
+  animation:
+    navbarDrop 1s ease;
+}
 
-    padding:20px;
+@keyframes navbarDrop{
+
+  from{
+
+    opacity:0;
+
+    transform:translateY(-30px);
   }
 
-  .navbar-links{
+  to{
 
-    gap:18px;
+    opacity:1;
+
+    transform:translateY(0);
+  }
+}
+
+/* LIGHTBOX ANIMATION */
+
+.lightbox{
+
+  animation:
+    lightboxFade 0.35s ease;
+}
+
+.lightbox img{
+
+  animation:
+    zoomIn 0.35s ease;
+}
+
+@keyframes lightboxFade{
+
+  from{
+    opacity:0;
   }
 
-  .hero{
+  to{
+    opacity:1;
+  }
+}
 
-    padding:0 20px;
+@keyframes zoomIn{
+
+  from{
+
+    transform:scale(0.85);
+
+    opacity:0;
   }
 
-  .hero h1{
+  to{
 
-    font-size:2.9rem;
+    transform:scale(1);
+
+    opacity:1;
   }
+}
 
-  .about-section,
-  .projects-section,
-  .contact-section{
+/* REEL HOVER */
 
-    padding:100px 20px;
-  }
+.reel-card video{
 
-  .about-content h2,
-  .projects-header h2,
-  .contact-card h2{
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
 
-    font-size:2.2rem;
-  }
+.reel-card video:hover{
 
-  .contact-card{
+  transform:scale(1.01);
 
-    padding:36px 24px;
-  }
-
+  box-shadow:
+    0 40px 90px rgba(0,0,0,0.45);
 }
