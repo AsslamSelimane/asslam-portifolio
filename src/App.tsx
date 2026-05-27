@@ -13,11 +13,11 @@ function App() {
           <a href="#">Início</a>
           <a href="#">Sobre</a>
           <a href="#">Skills</a>
-          <a href="#">Contacto</a>
+          <a href="#">Projectos</a>
         </nav>
       </header>
 
-      {/* HERO SECTION */}
+      {/* HERO */}
 
       <section className="hero">
         <span className="tag">PORTFÓLIO PROFISSIONAL</span>
@@ -42,9 +42,10 @@ function App() {
         </div>
       </section>
 
-      {/* ABOUT SECTION */}
+      {/* ABOUT */}
 
       <section className="about">
+
         <div className="about-text">
 
           <span className="section-tag">
@@ -68,9 +69,10 @@ function App() {
           </p>
 
         </div>
+
       </section>
 
-      {/* SKILLS SECTION */}
+      {/* SKILLS */}
 
       <section className="skills">
 
@@ -116,15 +118,4 @@ function App() {
 
             <p>
               Estratégias digitais focadas
-              em alcance, engajamento e conversão.
-            </p>
-          </div>
-
-        </div>
-      </section>
-
-    </div>
-  )
-}
-
-export default App
+              em alcance, engaj
